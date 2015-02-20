@@ -6,6 +6,7 @@ $config = array(
 	'worker_num' => 1,
 	'open_eof_check' => true,
 	'package_eof' => "\r\n",
+	'package_max_length' => 1024 * 1024 * 2,
 	'heartbeat_check_interval' => 60,
 	'heartbeat_idle_time' => 600,
 	'daemonize' => 1,
@@ -75,8 +76,9 @@ function my_close($serv, $fd)
 		unset($sess_list[$k][$fd]);
 	}
 }
-	$serv->on('receive', 'my_receive');
-	$serv->on('close', 'my_close');
 
-	$serv->start();
+$serv->on('receive', 'my_receive');
+$serv->on('close', 'my_close');
+
+$serv->start();
 ?>

@@ -1,4 +1,4 @@
-Publish/Subscribe messaging system with swoole server
+Publish/Subscribe messaging system with swoole-1.7.10-stable
 
 Requirement
   swoole: https://github.com/swoole/swoole-src/
