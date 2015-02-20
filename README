@@ -1,1 +1,4 @@
 Publish/Subscribe messaging system with swoole server
+
+Requirement
+  swoole: https://github.com/swoole/swoole-src/
